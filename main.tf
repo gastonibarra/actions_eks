@@ -26,7 +26,7 @@ resource "aws_subnet" "subnet_c" {
 }
 
 module "eks_cluster" {
-  source = "terraform-aws-modules/eks/aws"
+  source = "github.com/terraform-aws-modules/terraform-aws-eks//modules/eks?ref=master"
 
   cluster_name    = "my-eks-cluster"
   cluster_version = "1.21"
